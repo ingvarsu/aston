@@ -126,7 +126,7 @@ public class Main {
             arr[i] = i+1;
 
         }
-        System.out.print(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
     }
     //12.
     public static void task12 () {
@@ -137,7 +137,7 @@ public class Main {
 
 
         }
-        System.out.print(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
     }
 
     //13.
@@ -157,12 +157,12 @@ public class Main {
     }
     //14.
     public static int[] task14 (int len, int initialValue) {
-            int [] arr  = new int [len];
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = initialValue;
-                return arr;
-            }
-        return arr;
+        int[] arr = new int[len];
+        for (int i = 0; i < len; i++) {
+            arr[i] = initialValue;
+            System.out.print("[" + i + "]" + arr[i] + " ");
+        }
+    return arr;
     }
 
 
