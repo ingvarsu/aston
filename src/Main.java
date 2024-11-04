@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         printThreeWords();
@@ -11,9 +13,9 @@ public class Main {
         System.out.println(task9(1988));
         task10();
         task11();
-        //task12();
-        //task13();
-        //task14();
+        task12();
+        task13();
+        task14(2,3);
     }
     //1.
     public static void printThreeWords() {
@@ -113,20 +115,58 @@ public class Main {
                 arr[i] = 1;
             }
             else arr[i] = 0;
-            System.out.println(arr[i]);
-        }
 
+        }
+        System.out.println(Arrays.toString(arr));
     }
     //11.
     public static void task11 () {
         int [] arr = new int[100];
         for(int i = 0; i < arr.length; i++) {
             arr[i] = i+1;
-            System.out.print(arr[i]);
+
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+    //12.
+    public static void task12 () {
+        int [] arr = new int [] {1,5,3,2,11,4,5,2,4,8,9,1};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6)
+                arr[i] *= 2;
+
+
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    //13.
+    public static void task13 () {
+        int[][] arr = new int[9][9];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i == j || i + j == arr.length - 1) {
+                    arr[i][j] = 1;
+
+                }
+                System.out.print (arr[i][j] + " ");
+            }
+            System.out.println();
         }
 
     }
-    //12.
+    //14.
+    public static int[] task14 (int len, int initialValue) {
+        int[] arr = new int[len];
+        for (int i = 0; i < len; i++) {
+            arr[i] = initialValue;
+            System.out.print("[" + i + "]" + arr[i] + " ");
+        }
+    return arr;
+    }
+
+
+
 
 
 
